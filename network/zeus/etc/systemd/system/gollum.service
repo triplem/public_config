@@ -1,0 +1,28 @@
+[Unit]
+Description=Gollum Unicorn Service
+
+[Service]
+Type=simple
+SyslogIdentifier=gl-unicorn
+User=gollum
+PIDFile=/run/unicorn/private.wiki.pid
+WorkingDirectory=/srv/gollum/private.git
+ExecStart=/bin/gollum.sh
+
+#ExecReload=/bin/kill -s USR2 $MAINPID
+
+#ExecStop=/bin/kill -s QUIT $MAINPID
+
+Environment=PATH=/usr/local/rvm/gems/ruby-1.9.3-p545@gollum/bin:/usr/local/rvm/gems/ruby-1.9.3-p545@global/bin:/usr/local/rvm/rubies/ruby-1.9.3-p545/bin:/usr/local/rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perl
+Environment=rvm_env_string=ruby-1.9.3-p545@gollum
+Environment=rvm_path=/usr/local/rvm
+Environment=rvm_ruby_string=ruby-1.9.3-p545
+Environment=rvm_gemset_name=gollum
+Environment=RUBY_VERSION=ruby-1.9.3-p545
+Environment=GEM_HOME=/usr/local/rvm/gems/ruby-1.9.3-p545@gollum
+Environment=GEM_PATH=/usr/local/rvm/gems/ruby-1.9.3-p545@gollum:/usr/local/rvm/gems/ruby-1.9.3-p545@global
+Environment=MY_RUBY_HOME=/usr/local/rvm/rubies/ruby-1.9.3-p545
+Environment=IRBRC=/usr/local/rvm/rubies/ruby-1.9.3-p545/.irbrc
+
+[Install]
+WantedBy=network.target

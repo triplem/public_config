@@ -1,5 +1,5 @@
 # unicorn_rails -c /data/github/current/config/unicorn.rb -E production -D
-app_directory = "/srv/gollum/private"
+app_directory = "/srv/gollum/private.git"
  
 worker_processes 2
  
