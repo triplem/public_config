@@ -1,1 +1,1 @@
-see [Home.md](Home.md)
+see [Home](Home)
