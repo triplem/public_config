@@ -12,6 +12,6 @@ Precious::App.set(:wiki_options, {
 
 # usually just run Precious::App, but we are using a base_path ;-)
 
-map '/wiki/private' do
+map '/wiki/public' do
     run Precious::App
 end

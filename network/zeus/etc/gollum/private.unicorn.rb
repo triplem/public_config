@@ -1,11 +1,15 @@
 # unicorn_rails -c /data/github/current/config/unicorn.rb -E production -D
-app_directory = "/srv/gollum/private.git"
+wiki_name = "private"
+
+run_path = "/run/unicorn"
+log_path = "/var/log/unicorn"
+app_directory = "/srv/gollum/#{wiki_name}.git"
  
 worker_processes 2
  
 working_directory app_directory
  
-listen "unix:/run/unicorn/private.wiki.sock", :backlog => 64
+listen "unix:#{run_path}/#{wiki_name}.wiki.sock", :backlog => 64
  
 timeout 30
  
@@ -15,10 +19,10 @@ File.umask(027)
  
 preload_app true
  
-pid "/run/unicorn/private.wiki.pid"
+pid "#{run_path}/#{wiki_name}.wiki.pid"
  
-stderr_path "/var/log/unicorn/private.stderr.log"
-stdout_path "/var/log/unicorn/private.stdout.log"
+stderr_path "#{log_path}/#{wiki_name}.stderr.log"
+stdout_path "#{log_path}/#{wiki_name}.stdout.log"
 
 # combine Ruby 2.0.0dev or REE with "preload_app true" for memory savings
 # http://rubyenterpriseedition.com/faq.html#adapt_apps_for_cow

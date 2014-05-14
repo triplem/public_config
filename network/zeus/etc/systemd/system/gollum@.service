@@ -1,13 +1,13 @@
 [Unit]
-Description=Gollum Unicorn Service
+Description=Gollum Unicorn Service (private)
 
 [Service]
 Type=simple
 SyslogIdentifier=gl-unicorn
 User=gollum
-PIDFile=/run/unicorn/private.wiki.pid
-WorkingDirectory=/srv/gollum/private.git
-ExecStart=/bin/gollum.sh
+PIDFile=/run/unicorn/%i.wiki.pid
+WorkingDirectory=/srv/gollum/%i.git
+ExecStart=/bin/gollum.sh %i
 
 #ExecReload=/bin/kill -s USR2 $MAINPID
 
