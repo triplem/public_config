@@ -8,13 +8,12 @@ Kernel: 3.14.2-1-ARCH
 Shell: /bin/bash
 CPU: Intel(R) Core(TM) i5-4570 CPU @ 3.20GHz
 RAM: 4277 MB / 15715 MB
-Disk: 2,0T / 7,3T
 ```
 
 |NAME   |SIZE |TYPE|MOUNTPOINT|
 |-------|-----|----|----------|
 |sda    | 2,7T|disk||
-|└─sda1 | 2,7T|part|/mnt/btrfs_raid - btrfs (sda1 and sdb1)|
+|└─sda1 | 2,7T|part|/mnt/btrfs_raid - btrfs (sda1 and sdb1) - raid1|
 |sdb    | 2,7T|disk||
 |└─sdb1 | 2,7T|part||
 |sdc    | 1,8T|disk||
