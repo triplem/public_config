@@ -1,6 +1,6 @@
 # zeus
 
-## Details
+## Hardware
 
 ```
 Distro: Arch Linux
@@ -28,4 +28,8 @@ RAM: 4277 MB / 15715 MB
 
 fixed dhcp address on mac-address (configured in fritz.box): 192.168.0.20
 
-## applications 
+## Software
+
+### minimserver
+
+### gollum 
