@@ -51,11 +51,13 @@ chgrp gollum * -R
 
 If you are using bare repositories with gollum, you need to suffix the repository directory with the ".git" extension, which is a convention in the git world.
 
-Since I planned to provide two different wikis on my server I needed two configuration files for unicorn ([unicorn_private.rb](../network/zeus/etc/gollum/unicorn_private.rb) and [unicorn_public.rb](../network/zeus/etc/gollum/unicorn_public.rb)), which I placed in the /etc/gollum folder.
+Since I planned to provide two different wikis on my server I needed two configuration files for unicorn ([unicorn_private.rb](../network/zeus/etc/gollum/private.unicorn.rb) and [unicorn_public.rb](../network/zeus/etc/gollum/public.unicorn.rb)), which I placed in the /etc/gollum folder.
 
-Furthermore each git repository needed a config.ru (rack file needed for unicorn), see [config.ru public](../network/zeus/srv/public.git/config.ru) and [config.ru private](../network/zeus/srv/private.git/config.ru).
+Furthermore each git repository needed a config.ru (rack file needed for unicorn), see [config.ru public](../network/zeus/srv/gollum/public.git/config.ru) and [config.ru private](../network/zeus/srv/gollum/private.git/config.ru).
 
-To start the two gollum instances, I create a systemd-unit-file called [gollum@.service](../network/zeus/etc/systemd/system/gollum@.service), which allowed me to enable each wiki with
+To start the two gollum instances, I create a systemd-unit-file called [gollum@.service](../network/zeus/etc/systemd/system/gollum@.service). This file uses a new [gollum.sh](../network/zeus/bin/gollum.sh), which I put into the /bin folder.
+
+Now I can start any of the two instances of gollum using:
 
 ```
 systemctl start gollum@private.service
@@ -99,5 +101,5 @@ http {
     ...
 ```
 
- 
+I would like to adopt the configuration of unicorn (unicorn.rb) and the two config.ru files, so that I can only change one file to adopt both instances.
 
