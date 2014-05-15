@@ -50,3 +50,15 @@ http {
 
 Now the monitorix service is available on http://servername/monitorix.
 
+To enable the nginx-status query of monitorix, the following lines need to get
+added to the nginx.conf:
+
+```
+  location /status {
+        # copied from http://blog.kovyrin.net/2006/04/29/monitoring-nginx-with-rrdtool/
+        stub_status on;
+        access_log   off;
+        allow 127.0.0.1;
+        deny all;
+  }
+```
