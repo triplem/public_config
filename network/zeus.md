@@ -2,13 +2,9 @@
 
 ## Hardware
 
-```
-Distro: Arch Linux
-Kernel: 3.14.2-1-ARCH
-Shell: /bin/bash
-CPU: Intel(R) Core(TM) i5-4570 CPU @ 3.20GHz
-RAM: 4277 MB / 15715 MB
-```
+* Distro: Arch Linux
+* CPU: Intel(R) Core(TM) i5-4570 CPU @ 3.20GHz
+* RAM: 15715 MB
 
 |NAME   |SIZE |TYPE|MOUNTPOINT|
 |-------|-----|----|----------|
@@ -25,11 +21,15 @@ RAM: 4277 MB / 15715 MB
 |├─sdd1 | 512M|part|/boot|
 |└─sdd2 |59,1G|part|/|
 
+## Network
 
 fixed dhcp address on mac-address (configured in fritz.box): 192.168.0.20
 
 ## Software
 
-### minimserver
+The following applications are installed and running on this machine. Some detailed information about the installation and configuration of these Applications are linked. 
 
-### gollum 
+* minimserver
+* [gollum](applications/gollum)
+* monitorix
+* linux-dash
