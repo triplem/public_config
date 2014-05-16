@@ -4,6 +4,8 @@ my personal laptop
 
 ## Hardware
 
+* [Dell Precision 4800](http://www.dell.com/de/unternehmen/p/precision-m4800-workstation/fs)
+
 * Arch Linux
 * CPU: Intel(R) Core(TM) i7-4800MQ CPU @ 2.70GHz
 * RAM: 15958 MB 
@@ -19,6 +21,7 @@ sdb     |238,5G|disk| |
 ├─sdb2  |100G  |part| /|
 └─sdb3  |138G  |part| /home|
 
-** Configuration
+## Configuration
 
-* [fstab](network/prometheus/etc/fstab)
+* [fstab](prometheus/etc/fstab)
+
