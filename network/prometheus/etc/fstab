@@ -1,0 +1,21 @@
+# 
+# /etc/fstab: static file system information
+#
+# <file system>	<dir>	<type>	<options>	<dump>	<pass>
+# /dev/sdb2 UUID=cf7b30b8-b233-4dc6-b1b1-3ce22b1d3494 LABEL=root
+UUID=cf7b30b8-b233-4dc6-b1b1-3ce22b1d3494       	/         	btrfs     	rw,noatime,compress=lzo,ssd,discard,space_cache,autodefrag,inode_cache	0 0
+
+# /dev/sdb3 UUID=6431fa52-ad59-4895-880a-79a40b493f15 LABEL=home
+UUID=6431fa52-ad59-4895-880a-79a40b493f15       	/home     	btrfs     	rw,noatime,compress=lzo,ssd,discard,space_cache,autodefrag,inode_cache	0 0
+
+# /dev/sdb1 UUID=16F0-E205 LABEL=EFI
+UUID=16F0-E205       	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro	0 2
+
+# /dev/sda1 UUID=2b41ddfa-5556-4956-a62e-4378d6c5be95 LABEL=swap
+UUID=2b41ddfa-5556-4956-a62e-4378d6c5be95	swap		swap		defafults	0 0
+
+# /dev/sda2 UUID=92ae685f-fb3e-4c5a-ae31-ee31d08e29ea LABEL=
+UUID=92ae685f-fb3e-4c5a-ae31-ee31d08e29ea	/mnt/data	btrfs	rw,noatime,compress=lzo,autodefrag	0 0
+
+# /dev/sda3 UUID
+UUID=6cd06b9f-45dd-44f8-8461-55370ee35b88	/var	ext4	defaults	0 0
