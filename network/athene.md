@@ -13,8 +13,12 @@ MediaPlayer in Livingroom.
 |NAME   |SIZE  |TYPE|MOUNTPOINT|
 |-------|------|----|----------|
 |mmcblk0| 14.8G    |disk| |
-||-mmcblk0p1| 20M  |part| /boot|
-|`-mmcblk0p2| 14.8G|part| / |
+|├─mmcblk0p1| 20M  |part| /boot|
+|└─mmcblk0p2| 14.8G|part| / |
+
+## Configuration
+
+
 
 
 
