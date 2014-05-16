@@ -21,9 +21,10 @@
 |├─sdd1 | 512M|part|/boot|
 |└─sdd2 |59,1G|part|/|
 
-## Network
+## Configuration
 
-fixed dhcp address on mac-address (configured in fritz.box): 192.168.0.10
+* fixed dhcp address on mac-address (configured in fritz.box): 192.168.0.10 using [netctl](https://wiki.archlinux.org/index.php/netctl) with this [ethernet-dhcp](etc/netctl/ethernet-dhcp) profile
+* [fstab](etc/fstab)
 
 ## Software
 
