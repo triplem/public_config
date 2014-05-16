@@ -23,7 +23,7 @@
 
 ## Network
 
-fixed dhcp address on mac-address (configured in fritz.box): 192.168.0.20
+fixed dhcp address on mac-address (configured in fritz.box): 192.168.0.10
 
 ## Software
 
