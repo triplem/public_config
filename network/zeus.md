@@ -23,13 +23,13 @@
 
 ## Network
 
-fixed dhcp address on mac-address (configured in fritz.box): 192.168.0.20
+fixed dhcp address on mac-address (configured in fritz.box): 192.168.0.10
 
 ## Software
 
 The following applications are installed and running on this machine. Some detailed information about the installation and configuration of these Applications are linked. 
 
-* minimserver
+* [minimserver](../applications/minimserver)
 * [gollum](../applications/gollum)
-* monitorix
-* linux-dash
+* [monitorix](../applications/monitorix)
+* [linux-dash](../applications/linux-dash)
