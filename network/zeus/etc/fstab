@@ -1,0 +1,28 @@
+# 
+# /etc/fstab: static file system information
+#
+# <file system> <dir>   <type>  <options>       <dump>  <pass>
+
+# /dev/sdd2 LABEL=root
+UUID=16ed4660-0fb4-4ede-88cd-3962dfdb30d6	/         	btrfs     	rw,noatime,compress=lzo,ssd,discard,space_cache,autodefrag,inode_cache	0 0
+
+# efivarfs
+efivarfs            	/sys/firmware/efi/efivars	efivarfs  	rw,nosuid,nodev,noexec,relatime	0 0
+
+# /dev/sdd1 LABEL=EFI
+UUID=2FFE-4B55      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro	0 2
+
+# /dev/sda1
+UUID=244e297b-3da0-4f29-8023-b13e98c7caf5	/mnt/btrfs_raid	btrfs     	rw,noatime,compress=lzo,space_cache,autodefrag	0 0
+
+# /dev/sdc4 LABEL=home
+UUID=d6c94bb6-13d5-4a58-ac6f-f281009770ff	/home     	btrfs     	rw,relatime,compress=lzo,space_cache,autodefrag	0 0
+
+# /dev/sdc3 LABEL=srv
+UUID=ea6755cd-9075-4a8c-8202-b039c73a4fde	/srv      	ext4      	rw,relatime,data=ordered	0 2
+
+# /dev/sdc2 LABEL=var
+UUID=5988bede-e7c4-4491-8e35-9f3ef162d97a	/var      	ext4      	rw,relatime,data=ordered	0 2
+
+# /dev/sdc1 LABEL=swap 
+UUID=621574bc-b525-4733-bb27-be69ac05b7f1	swap		swap		defaults	0 0
