@@ -1,6 +1,6 @@
 # Network Nodes
 
 * [zeus](zeus)
-* prometheus
+* [prometheus](prometheus)
 * athene
 * themis
