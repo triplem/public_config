@@ -1,5 +1,7 @@
 # zeus
 
+central server (nas, ...) in "Kammer des Schreckens"
+
 ## Hardware
 
 * Distro: Arch Linux
