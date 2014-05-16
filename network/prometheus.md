@@ -25,3 +25,6 @@ sdb     |238,5G|disk| |
 
 * [fstab](prometheus/etc/fstab)
 
+## Applications
+
+* [minimwatch](../applications/minimwatch)
